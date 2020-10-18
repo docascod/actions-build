@@ -1,7 +1,4 @@
-on:
-  push:
-    paths:
-    - '/Example/*.md'
+on: [push]
 
 jobs:
   md2pdf:
