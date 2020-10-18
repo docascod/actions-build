@@ -3,20 +3,18 @@ on: [push]
 jobs:
   md2pdf:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to test this action
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        uses: ./ # Uses an action in the root directory
+        uses: ./
         id: build_doc
         with:
-          sources: '/Example/*.md'
+          sources: 'Example/*.md'
       - name: PublisH
         id: publish_doc
         uses: actions/upload-artifact@v2
         with:
           name: 'your_documents'
-          path: '/Example/*.pdf'
+          path: 'Example/*.pdf'
