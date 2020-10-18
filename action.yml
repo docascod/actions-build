@@ -1,0 +1,15 @@
+name: 'Build your docs with DocsAsCode'
+description: ''
+author: 'docsascode <docsascode@protonmail.com>'
+inputs:
+  sources:
+    description: 'List of glob patterns to files'
+    required: true
+outputs:
+  documents:
+    description: Published documents
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.sources }}
