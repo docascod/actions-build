@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-    - '/example/*.md'
+    - '/Example/*.md'
 
 jobs:
   md2pdf:
@@ -12,14 +12,14 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: 
+      - name: Build
         uses: ./ # Uses an action in the root directory
         id: build_doc
         with:
-          sources: '/example/*.md'
-      - name: publish result
+          sources: '/Example/*.md'
+      - name: PublisH
         id: publish_doc
         uses: actions/upload-artifact@v2
         with:
           name: 'your_documents'
-          path: '/example/*.pdf'
+          path: '/Example/*.pdf'
