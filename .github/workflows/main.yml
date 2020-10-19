@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test this action
     env:
-      output_folder: 'Example/build/'
+      DEFAULT_DESTINATION: 'Example/build/'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,11 +16,10 @@ jobs:
         id: build_doc
         with:
           sources: 'Example/*.md'
-          output_dir: '${{env.output_folder}}'
           default_outputs: 'output.slides'
       - name: Publish
         id: publish_doc
         uses: actions/upload-artifact@v2
         with:
           name: 'your_documents'
-          path: '${{env.output_folder}}*.pdf'
+          path: '${DEFAULT_DESTINATION}/*.pdf'
