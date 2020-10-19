@@ -17,6 +17,7 @@ jobs:
         with:
           sources: 'Example/*.md'
           output_dir: '${{output_folder}}'
+          default_outputs: 'output.slides'
       - name: Publish
         id: publish_doc
         uses: actions/upload-artifact@v2
