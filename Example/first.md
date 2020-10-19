@@ -13,7 +13,6 @@ sequenceDiagram
 
 <<<
 
-
 next page
 
 END OF TRANSMISSION
