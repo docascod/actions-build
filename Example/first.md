@@ -2,7 +2,7 @@
 
 This is the **first** document
 
-with a small diagram
+with a small diagram:
 
 ```mermaid
 sequenceDiagram
