@@ -14,7 +14,7 @@ jobs:
         id: build_doc
         with:
           sources: 'Example/*.md'
-          output_dir: 'Example/build'
+          output_dir: 'Example/build/'
       - name: PublisH
         id: publish_doc
         uses: actions/upload-artifact@v2
