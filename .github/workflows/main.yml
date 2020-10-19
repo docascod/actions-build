@@ -19,4 +19,4 @@ jobs:
       - name: Publish
         uses: actions/upload-artifact@v2
         with:
-          path: ${env.DEFAULT_DESTINATION}/*.pdf
+          path: ${{ env.DEFAULT_DESTINATION }}/*.pdf
