@@ -5,9 +5,6 @@ inputs:
   sources:
     description: 'List of glob patterns to your source files'
     required: true
-  output_dir:
-    description: '(Path) The location of the folder you want to place the built files. Default = same folder as source file.'
-    required: false
   default_outputs:
     description: 'The list of default outputs (themes) for your documents. Not used, if already set in document.'
     required: false
@@ -17,7 +14,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.sources }}
-    - ${{ inputs.output_dir }}
     - ${{ inputs.default_outputs }}
 
 branding:
