@@ -1,5 +1,7 @@
-on: [push]
-
+on:
+  push:
+    paths: 
+      - 'Example/*.md'
 jobs:
   md2pdf:
     runs-on: ubuntu-latest
@@ -12,9 +14,10 @@ jobs:
         id: build_doc
         with:
           sources: 'Example/*.md'
+          output_dir: 'Example/build'
       - name: PublisH
         id: publish_doc
         uses: actions/upload-artifact@v2
         with:
           name: 'your_documents'
-          path: 'Example/*.pdf'
+          path: 'Example/build/*.pdf'
