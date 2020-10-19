@@ -16,11 +16,11 @@ jobs:
         id: build_doc
         with:
           sources: 'Example/*.md'
-          output_dir: '${{output_folder}}'
+          output_dir: '${{env.output_folder}}'
           default_outputs: 'output.slides'
       - name: Publish
         id: publish_doc
         uses: actions/upload-artifact@v2
         with:
           name: 'your_documents'
-          path: '${{output_folder}}*.pdf'
+          path: '${{env.output_folder}}*.pdf'
