@@ -8,6 +8,7 @@ jobs:
     name: A job to test this action
     env:
       DEFAULT_DESTINATION: 'Example/build/'
+      DEFAULT_OUTPUT: output.slides
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -15,7 +16,6 @@ jobs:
         uses: ./
         with:
           sources: 'Example/*.md'
-          default_outputs: 'output.slides'
       - name: Publish
         uses: actions/upload-artifact@v2
         with:
