@@ -5,10 +5,9 @@ inputs:
   sources:
     description: 'List of glob patterns to your source files'
     required: true
-  default_outputs:
-    description: 'The list of default outputs (themes) for your documents. Not used, if already set in document.'
-    required: false
-    default: 'output.document'
+outputs:
+  generatedFiles:
+    description: 'List of generated documents'
 runs:
   using: 'docker'
   image: 'Dockerfile'
