@@ -5,6 +5,6 @@
 # echo $DEFAULT_DESTINATION
 
 entrypoint.sh build $INPUT_SOURCES
-
-echo "::set-output name=generatedFiles::${generatedFiles[@]}"
+echo ${generatedFiles[@]}
+# echo "::set-output name=generatedFiles::${generatedFiles[@]}"
 # echo "::set-output name=pdf::${DOCS}/document.pdf"
