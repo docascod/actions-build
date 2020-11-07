@@ -1,16 +1,12 @@
----
-msg: "How are U ?"
----
-
 # first title 
 
 This is the **first** document
 
-with a small diagrams
+with a small diagram
 
 ```mermaid
 sequenceDiagram
-    Alice->>John: Hello John, {msg}
+    Alice->>John: Hello John, How are U ?
     John-->>Alice: Great!
 ```
 <<<
