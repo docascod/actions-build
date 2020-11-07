@@ -1,4 +1,8 @@
-# first title
+---
+color: red
+---
+
+# first {color} title 
 
 This is the **first** document
 
