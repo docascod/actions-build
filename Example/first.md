@@ -1,8 +1,8 @@
 ---
-color: red
+msg: "How are U ?"
 ---
 
-# first {color} title 
+# first title 
 
 This is the **first** document
 
@@ -10,7 +10,7 @@ with a small diagrams
 
 ```mermaid
 sequenceDiagram
-    Alice->>John: Hello John, how are you?
+    Alice->>John: Hello John, {msg}
     John-->>Alice: Great!
 ```
 <<<
