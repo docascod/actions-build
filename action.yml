@@ -5,6 +5,7 @@ inputs:
   sources:
     description: 'List of glob patterns to your source files'
     required: true
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
