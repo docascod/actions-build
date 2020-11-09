@@ -1,11 +1,25 @@
-# actions-build
-To build your docs with [docsAsCode](https://github.com/docascod/DocsAsCode).
+# A github action for creating professional documents
 
-You can force output format with `DEFAULT_OUTPUT` environment variable.
+This action creates documents(PDF) from markdown, reStructuredText or asciidoctor.
+Based on [docsAsCode](https://github.com/docascod/DocsAsCode).
 
-You can change destination folder with `DEFAULT_DESTINATION` environment variable.
+## Inputs
 
-An example to build and upload result as artifact
+### `sources`
+
+**Required** Location of source files in github repository. Default: repo´s root.
+
+## Environment variables
+
+### `DEFAULT_DESTINATION`
+
+Location to output PDF files. Default: source dir
+
+### `DEFAULT_OUTPUT`
+
+Output format for documents. Default: output.document
+
+## Example usage with result in artifact
 
 ```yml
 on:
@@ -31,3 +45,5 @@ jobs:
         with:
           path: ${{ env.DEFAULT_DESTINATION }}/*.pdf
 ```
+
+NOTE: upload-artifact action always compress result before upload.
