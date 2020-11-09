@@ -5,16 +5,12 @@ inputs:
   sources:
     description: 'List of glob patterns to your source files'
     required: true
-outputs:
-  generatedFiles:
-    description: 'List of generated documents'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.sources }}
-    - ${{ inputs.default_outputs }}
-
+ 
 branding:
   icon: 'book'
   color: 'red'
