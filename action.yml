@@ -1,5 +1,5 @@
 name: 'Build your docs with DocsAsCode'
-description: ''
+description: 'Action to create professionnal documents(PDF) from md, rst or adoc. Based on docsAsCode project.'
 author: 'docsascode <docsascode@protonmail.com>'
 inputs:
   sources:
