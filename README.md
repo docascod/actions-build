@@ -1,5 +1,5 @@
 # actions-build
-To build your docs with docsAsCode.
+To build your docs with [docsAsCode](https://github.com/docascod/DocsAsCode).
 
 You can force output format with `DEFAULT_OUTPUT` environment variable.
 
