@@ -37,7 +37,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        uses: ./
+        uses: docascod/actions-build@1.0
         with:
           sources: 'Example/*.md'
       - name: Publish
